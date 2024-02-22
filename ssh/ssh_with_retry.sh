@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ~/.shoppal/env.sh
+
 # ANSI颜色代码
 RED='\033[0;31m'
 NO_COLOR='\033[0m'
@@ -11,7 +13,7 @@ log() {
 
 # 参数检查
 if [ "$#" -lt 4 ]; then
-    log "Usage: $0 <instance-name> <ssh-port> <project-id> <zone> [user]"
+    log "Usage: $0 <instance-name> <ssh-port> <project-id> <zone>"
     exit 1
 fi
 
@@ -20,7 +22,7 @@ INSTANCE_NAME="$1"
 PORT="$2"
 PROJECT_ID="$3"
 ZONE="$4"
-USER="${5:-$(id -un)}"
+USER="${SHOPPAL_USER:-$(id -un)}"
 
 # 获取公网IP
 IP=$(~/.shoppal/ssh/gcp_ssh_proxy.sh "$INSTANCE_NAME" "$PROJECT_ID" "$ZONE")
