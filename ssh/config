@@ -61,3 +61,7 @@ Host g0272
   Port 22
   ProxyJump 36.103.203.36
   IdentityFile ~/.ssh/id_rsa
+
+Host oci-bastion
+  HostName 149.130.208.127
+  Port 22
