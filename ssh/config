@@ -37,7 +37,7 @@ Host gcp-t4-instance-1
 
 Host gcp-l4-instance-2
   Port 22
-  ProxyCommand ~/.shoppal/ssh/ssh_with_retry.sh %h %p just-for-test-403604 asia-northeast1-a 
+  ProxyCommand ~/.shoppal/ssh/ssh_with_retry.sh %h %p just-for-test-403604 us-east1-c
 
 Host gcp-t4-instance-2
   Port 22
@@ -64,4 +64,12 @@ Host g0272
 
 Host oci-bastion
   HostName 149.130.208.127
+  Port 22
+
+Host dreampal-spider-dev
+  HostName 35.196.56.241
+  Port 22
+
+Host dreampal-spider-production
+  HostName 34.23.172.89
   Port 22
