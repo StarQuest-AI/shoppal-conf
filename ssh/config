@@ -67,9 +67,9 @@ Host oci-bastion
   Port 22
 
 Host dreampal-spider-dev
-  HostName 35.196.56.241
+  ProxyCommand ~/.shoppal/ssh/ssh_with_retry.sh %h %p just-for-test-403604 us-east1-b
   Port 22
 
 Host dreampal-spider-production
-  HostName 34.23.172.89
+  ProxyCommand ~/.shoppal/ssh/ssh_with_retry.sh %h %p just-for-test-403604 us-east1-b
   Port 22
