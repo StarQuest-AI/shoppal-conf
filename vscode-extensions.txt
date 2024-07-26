@@ -149,3 +149,4 @@ xirider.livecode
 zainchen.json
 zhuangtongfa.material-theme
 ziyasal.vscode-open-in-github
+shinichi-takii.sql-bigquery
