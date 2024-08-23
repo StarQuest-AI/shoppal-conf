@@ -23,7 +23,7 @@ Host devpod
   User root
   IdentityFile ~/.devpod/devpod
   ConnectTimeout 60
-  StrictHostKeyChecking=no
+  StrictHostKeyChecking no
   ServerAliveInterval 15
   ServerAliveCountMax 4
 
@@ -73,3 +73,8 @@ Host dreampal-spider-dev
 Host dreampal-spider-production
   ProxyCommand ~/.shoppal/ssh/ssh_with_retry.sh %h %p just-for-test-403604 us-east1-b
   Port 22
+
+Host l4.ssh.buildagi.us
+  ProxyCommand cloudflared access ssh --hostname %h
+  Port 22
+
