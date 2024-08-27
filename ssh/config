@@ -78,3 +78,6 @@ Host l4.ssh.buildagi.us
   ProxyCommand cloudflared access ssh --hostname %h
   Port 22
 
+Host oci.ssh.buildagi.us
+  ProxyCommand cloudflared access ssh --hostname %h
+  Port 22
