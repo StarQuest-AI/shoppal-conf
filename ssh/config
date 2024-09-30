@@ -1,22 +1,4 @@
 
-Host g0001
-  HostName 36.103.234.56
-  Port 2240
-
-Host g0002
-  HostName 36.103.234.56
-  Port 2242
-
-Host g0003
-  HostName 36.103.234.56
-  Port 2243
-
-Host g0001_via_g0002
-  HostName g0001
-  Port 22
-  ProxyJump g0002
-  IdentityFile ~/.ssh/id_rsa
-
 Host devpod
   HostName localhost
   Port 2222
@@ -27,21 +9,10 @@ Host devpod
   ServerAliveInterval 15
   ServerAliveCountMax 4
 
-Host gcp-l4-instance-1
-  Port 22
-  ProxyCommand ~/.shoppal/ssh/ssh_with_retry.sh %h %p just-for-test-403604 us-east1-c
-
-Host gcp-t4-instance-1
-  Port 22
-  ProxyCommand ~/.shoppal/ssh/ssh_with_retry.sh %h %p just-for-test-403604 us-central1-a 
 
 Host gcp-l4-instance-2
   Port 22
   ProxyCommand ~/.shoppal/ssh/ssh_with_retry.sh %h %p just-for-test-403604 us-east1-c
-
-Host gcp-t4-instance-2
-  Port 22
-  ProxyCommand ~/.shoppal/ssh/ssh_with_retry.sh %h %p just-for-test-403604 asia-northeast1-a 
 
 # all other gcp-instances in asia-northeast1-a zone
 Host gcp-*
@@ -64,14 +35,6 @@ Host g0272
 
 Host oci-bastion
   HostName 149.130.208.127
-  Port 22
-
-Host dreampal-spider-dev
-  ProxyCommand ~/.shoppal/ssh/ssh_with_retry.sh %h %p just-for-test-403604 us-east1-b
-  Port 22
-
-Host dreampal-spider-production
-  ProxyCommand ~/.shoppal/ssh/ssh_with_retry.sh %h %p just-for-test-403604 us-east1-b
   Port 22
 
 Host l4.ssh.buildagi.us
