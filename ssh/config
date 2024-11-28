@@ -33,8 +33,19 @@ Host g0272
   ProxyJump 36.103.203.36
   IdentityFile ~/.ssh/id_rsa
 
-Host oci-bastion
-  HostName 149.130.208.127
+# Chicago bastion
+Host oci-bastion.ssh.buildagi.us
+  Hostname 149.130.208.127
+  Port 22
+
+# Ashburn bastion
+Host oci-ashburn.ssh.buildagi.us
+  Hostname 150.136.181.192
+  Port 22
+
+# Ashburn A10 dev node
+Host oci-dev.ssh.buildagi.us
+  Hostname 132.145.205.204
   Port 22
 
 Host l4.ssh.buildagi.us
