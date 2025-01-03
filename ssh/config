@@ -30,7 +30,7 @@ Host g0271
 Host g0272
   HostName 10.254.31.2
   Port 22
-  ProxyJump 36.103.203.36
+  ProxyJump 36.103.234.48
   IdentityFile ~/.ssh/id_rsa
 
 # Ashburn bastion
