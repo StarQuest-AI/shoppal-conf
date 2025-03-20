@@ -19,20 +19,6 @@ Host gcp-*
   Port 22
   ProxyCommand ~/.shoppal/ssh/ssh_with_retry.sh %h %p just-for-test-403604 asia-northeast1-a 
 
-Host blsc-gpu-bastion
-  HostName 36.103.234.48
-  Port 22
-
-Host g0271
-  HostName 36.103.203.36
-  Port 22
-
-Host g0272
-  HostName 10.254.31.2
-  Port 22
-  ProxyJump 36.103.234.48
-  IdentityFile ~/.ssh/id_rsa
-
 # Ashburn bastion
 Host oci-ashburn.ssh.buildagi.us
   Hostname 150.136.181.192
@@ -49,12 +35,4 @@ Host oci-dev2.ssh.buildagi.us
 
 Host oci-dev3.ssh.buildagi.us
   Hostname 132.145.149.90
-  Port 22
-
-Host l4.ssh.buildagi.us
-  ProxyCommand cloudflared access ssh --hostname %h
-  Port 22
-
-Host oci.ssh.buildagi.us
-  ProxyCommand cloudflared access ssh --hostname %h
   Port 22
