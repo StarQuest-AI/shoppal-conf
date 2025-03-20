@@ -47,6 +47,10 @@ Host oci-dev2.ssh.buildagi.us
   Hostname 158.101.108.67
   Port 22
 
+Host oci-dev3.ssh.buildagi.us
+  Hostname 132.145.149.90
+  Port 22
+
 Host l4.ssh.buildagi.us
   ProxyCommand cloudflared access ssh --hostname %h
   Port 22
